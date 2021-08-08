@@ -2,4 +2,156 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+/*-----------------------------------------*/
+
+.benefits {
+	text-align: center;
+}
+
+.header {
+	color: #fff;
+	height: 650px;
+	@extend %background;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 35px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 483px;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 54px;
+		line-height: 1.66;
+		margin-left: 95px;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 1.2;
+		font-weight: 400;
+		display: block;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 34px;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.25;
+		color: #fff;
+		padding-bottom: 5px;
+		border-bottom: 3px solid transparent;
+		transition: all .2s;
+		&:hover {
+			border-color: $menu-white;
+		}
+		&:active {
+			border-color: red;
+		}
+		&:focus {
+			border-bottom: 3px dotted $menu-white;
+		}
+	}
+}
+
+.adventure {
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__text {
+		margin-right: 88px;
+		line-height: 1.5;
+		& p {
+			font-size: 16px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 23px;
+	}
+}
+
+.benefits {
+	position: relative;
+	z-index: 2;
+	background-image: url(../images/benefits-images/background-image.jpg);
+	@extend %background;
+	&::before {	
+		content: '';
+		width: 100%;
+		background-color: rgba(228, 236, 245, 0.9);
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		min-height: 240px;
+		max-width: 360px;
+		position: relative;
+		text-align: left;
+		padding: 82px 30px 25px 30px;
+		background-color: $background;
+		&::before {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: cover;
+			left: 30px;
+		}		
+		&--liner::before {
+			background-image: url(../images/benefits-images/liner.svg);
+			width: 27px;
+			height: 32px;
+			top: 30px;
+		}
+		&--check::before {
+			background-image: url(../images/benefits-images/check.svg);
+			width: 38px;
+			height: 21px;
+			top: 35px;
+		}
+		&--boat::before {
+			background-image: url(../images/benefits-images/boat.svg);
+			width: 42px;
+			height: 15px;
+			top: 38px;
+		}
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 1.5;
+		font-weight: 500;
+		margin-bottom: 8px;
+	}
+	&__text {
+		line-height: 1.4;
+	}
+}
+
+/*-----------------------------------------*/
 @import 'media';

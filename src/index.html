@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+	<!-- Метеданные -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>start gulp</title>
+	<!-- Заголовок -->
+	<title>Макет Антарктика</title>
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Стили и фавикон -->
+	<link href="images/favicon-min.png" rel="icon" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-
+<body id="top">
+	<header class="header" style="background-image: url(images/background.jpg);">
+		<div class="container">
+			<div class="header__top">
+				<a class="logo" href="#top">
+					<img class="logo__img" src="images/logo.svg" alt="Логотип" width="70" height="38">
+				</a>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#benefits" class="menu__link">Преимущества</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Направления</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Ближайшие круизы</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__content">
+				<h1 class="header__title">
+					Круизы в Антарктику
+					<span class="header__subtitle">Волшебный мир айсбергов и пингвинов</span>
+				</h1>
+			</div>
+		</div>
+	</header>
+	<section class="adventure section">
+		<div class="container">
+			<div class="adventure__inner">
+				<div class="adventure__text">
+					<h2 class="title adventure__title">Путешествие на край Земли</h2>
+					<p>
+						Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.
+					</p>
+				</div>
+				<img class="adventure__img" src="images/adventure_photo.jpg" alt="Пингвины" height="301" width="560">
+			</div>
+		</div>
+	</section>
+	<section class="benefits section" id="benefits">
+		<div class="container">
+			<h2 class="title">Преимущества</h2>
+			<ul class="benefits__list">
+				<li class="benefits__item benefits__item--liner">
+					<h3 class="benefits__title">Небольшой круизный лайнер</h3>
+					<p class="benefits__text">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+				</li>
+				<li class="benefits__item benefits__item--check">
+					<h3 class="benefits__title">Система все включено</h3>
+					<p class="benefits__text">Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+				</li>
+				<li class="benefits__item benefits__item--boat">
+					<h3 class="benefits__title">Экскурсионные туры на Zodiac</h3>
+					<p class="benefits__text">Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<button class="back-to-top">
+		<span class="sr-only">Подняться наверх</span>
+	</button>
 	<script src="js/main.min.js"></script>
 </body>
 </html>
