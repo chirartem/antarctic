@@ -18,21 +18,18 @@
 		align-items: center;
 		padding-top: 35px;
 	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		min-height: 483px;
 	}
-
 	&__title {
 		font-weight: bold;
 		font-size: 54px;
 		line-height: 1.66;
 		margin-left: 95px;
 	}
-
 	&__subtitle {
 		font-size: 20px;
 		line-height: 1.2;
@@ -62,11 +59,11 @@
 		&:hover {
 			border-color: $menu-white;
 		}
-		&:active {
-			border-color: red;
-		}
 		&:focus {
 			border-bottom: 3px dotted $menu-white;
+		}
+		&:active {
+			border-color: red;
 		}
 	}
 }
@@ -76,7 +73,6 @@
 		display: flex;
 		align-items: center;
 	}
-
 	&__text {
 		margin-right: 88px;
 		line-height: 1.5;
@@ -84,7 +80,6 @@
 			font-size: 16px;
 		}
 	}
-
 	&__title {
 		margin-bottom: 23px;
 	}
