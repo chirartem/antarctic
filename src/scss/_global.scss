@@ -1,34 +1,60 @@
-html {
-	box-sizing: border-box;
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	background-color: $background;
+	color: $default;
 }
 
-*, *::before, *::after {
-	box-sizing: inherit;
+.container {
+	width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
-ul[class], ol[class] {
+.section {
+	padding: 120px 0;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 46px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
 	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
-body, h1, h2, h3, h4, h5, h6, 
-p, ul[class], ol[class], li, figure, 
-figcaption, blockquote, dl, dd {
-	margin: 0;
-}
-
-ul[class] {
-	list-style: none;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-}
-
-input, button, textarea, select {
-	font: inherit;
-}
-
-a[class] {
-	text-decoration: none;
+.back-to-top {
+	position: fixed;
+	right: 50px;
+	bottom: 60px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: $default;
+	background-image: url(../images/back-to-top.svg);
+	z-index: 10;
+	transform: rotate(-90deg);
+	transition: all .1s;
+	@extend %background;
+	background-size: 60%;
+	&:focus {
+		box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.5);
+	}
+	&:hover {
+		background-color: #006dff;
+	}
+	&:active {
+		background-color: #0246a0;
+	}
 }

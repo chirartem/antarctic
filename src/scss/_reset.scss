@@ -6,17 +6,17 @@ html {
 	box-sizing: inherit;
 }
 
-ul[class], ol[class] {
+ul, ol[class], menu {
 	padding: 0;
 }
 
 body, h1, h2, h3, h4, h5, h6, 
-p, ul[class], ol[class], li, figure, 
+p, ul, ol[class], menu li, figure, 
 figcaption, blockquote, dl, dd {
 	margin: 0;
 }
 
-ul[class] {
+ul, menu { /* [class] */
 	list-style: none;
 }
 
@@ -29,6 +29,24 @@ input, button, textarea, select {
 	font: inherit;
 }
 
-a[class] {
+input, button, textarea {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+a {
 	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
 }
